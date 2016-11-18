@@ -1,0 +1,47 @@
+<!-- Page used for searching for tires by specifying tire dimensions -->
+
+<div class="container">
+
+	<h2>Find By Tire Size</h2>
+
+	<!-- User inputs for search function -->
+	<br />
+	<form name="form1" id="searchInputs">
+		<div class="row">	
+			<div class="col-md-4">Width<br /><input class="form-control" placeholder="225" ng-model="tire.width" required></div>
+			<div class="col-md-4">Ratio<br /><input class="form-control" placeholder="45" ng-model="tire.ratio" required></div>
+			<div class="col-md-4">Diameter<br /><input class="form-control" placeholder="17" ng-model="tire.diameter" required></div>
+		</div>
+	</form>
+
+	<br />
+	<button class="btn btn-default" ng-click="searchByTireSize()" ng-disabled="form1.$invalid"> 
+			Search <span class="glyphicon glyphicon-search"></span>
+	</button>
+
+	<br />
+	<br />
+
+	<!-- Data recieved from database -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Brand</th>
+				<th>Model</th>
+				<th>Description</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="result in results">
+				<td>{{result.brand}}</td>
+				<td>{{result.model}}</td>
+				<td id="tableDesc">{{result.disc}}</td>
+				<td>${{result.price}}</td>
+			</tr>
+		</tbody>
+	</table><!-- end table -->
+
+	<h3>{{nf}}</h3>
+
+</div>

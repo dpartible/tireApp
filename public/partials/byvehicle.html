@@ -1,0 +1,48 @@
+<!-- Page used for searching for tires by specifying vehicle -->
+
+<div class="container">
+
+	<!-- User inputs for search function -->
+	<form name="form1" id="searchInputs">
+		<br />
+		Make:
+		<input class="form-control" placeholder="Acura" ng-model="car.make" required>
+		Year:
+		<input class="form-control" placeholder="2015" ng-model="car.year" required>
+		Model:
+		<input class="form-control" placeholder="TLX" ng-model="car.model" required>
+		<br />
+
+		<button class="btn btn-default" ng-click="searchByVehicle()" ng-disabled="form1.$invalid">
+			Search <span class="glyphicon glyphicon-search"></span>
+		</button>
+
+	</form>
+
+	<br />
+	<br />
+
+	<!-- Data recieved from database -->
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Brand</th>
+				<th>Model</th>
+				<th>Description</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="result in results">
+				<td>{{result.brand}}</td>
+				<td>{{result.model}}</td>
+				<td id="tableDesc">{{result.disc}}</td>
+				<td>${{result.price}}</td>
+			</tr>
+		</tbody>
+	</table><!-- end table -->
+
+	<h3>{{nf}}</h3>
+
+
+</div>

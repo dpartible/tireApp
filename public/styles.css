@@ -1,0 +1,13 @@
+/*
+ *	My Custom CSS	
+ */
+
+
+#searchInputs .ng-invalid{
+	border: 1px solid red;
+}
+
+#searchInputs .ng-valid{
+	border: 1px solid green;
+}
+
