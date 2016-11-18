@@ -12,7 +12,8 @@ var dbVehicles = mongojs('mongodb://tire:1234@ds157487.mlab.com:57487/meantires'
 // Create express app
 var app = express();
 
-app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
+// app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Server uses GET request from client
