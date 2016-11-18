@@ -7,7 +7,7 @@ var myApp = angular.module('myApp', ['ui.router', 'myAppCtrl']);
 
 myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
-	console.log('running my app config');
+	// console.log('running my app config');
 
 	$urlRouterProvider.otherwise('/');	// if url is unknown default to home page
 
@@ -17,14 +17,14 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 			url: '/',
 			views:{
 				"mainBody": {
-					templateUrl: 'partials/byvehicle.html',
+					templateUrl: '/partials/byvehicle.html',
 					controller: 'MyAppController'
 				},"dataTable": {
-					templateUrl: 'partials/dataTable.html',
+					templateUrl: '/partials/dataTable.html',
 					controller: 'MyAppController'
 				},
 				"navBar": {
-					templateUrl: 'partials/navBar.html',
+					templateUrl: '/partials/navBar.html',
 					controller: 'MyAppController'
 				}
 			}
@@ -35,15 +35,15 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 			url: '/byvehicle',
 			views:{
 				"mainBody": {
-					templateUrl: 'partials/byvehicle.html',
+					templateUrl: '/partials/byvehicle.html',
 					controller: 'MyAppController'
 				},
 				"dataTable": {
-					templateUrl: 'partials/dataTable.html',
+					templateUrl: '/partials/dataTable.html',
 					controller: 'MyAppController'
 				},
 				"navBar": {
-					templateUrl: 'partials/navBar.html',
+					templateUrl: '/partials/navBar.html',
 					controller: 'MyAppController'
 				}
 			}
@@ -54,11 +54,11 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 			url: '/bysize',
 			views:{
 				"mainBody": {
-					templateUrl: 'partials/bytiresize.html',
+					templateUrl: '/partials/bytiresize.html',
 					controller: 'MyAppController'
 				},
 				"navBar": {
-					templateUrl: 'partials/navBar.html',
+					templateUrl: '/partials/navBar.html',
 					controller: 'MyAppController'
 				}
 			}
