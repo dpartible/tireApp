@@ -1,21 +1,9 @@
-Computer Must be able to run Nodejs
-https://nodejs.org/en/
+#MEAN Stack App
 
-1. Set-up database
-	-- For Windows
-		navigate to 'DatabaseWindows/bin'
-		run with command
-			mongod --dbpath ../
-	-- For OSX
-		navigate to 'Database/mongodb/bin'
-		run command 
-			./mongod --dbpath ../../
-		
-2. Run server
-	-- in root folder run command
-		node server
-		
-		
+Simple mean stack application. Allows users to search data for tires. Can either search using vehicle information or tire specifications.
+
+Data set is extremely small and was generated using http://www.json-generator.com/.
+
 Web API
 requests to the server should look like:
 	-- Search tire by Vehicle
@@ -28,18 +16,3 @@ returns JSON object from database
 
 Sample data can be found in the 'simData' folder
 All data was randomly generated
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
