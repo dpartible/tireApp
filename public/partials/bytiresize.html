@@ -7,15 +7,15 @@
 	<!-- User inputs for search function -->
 	<br />
 	<form name="form1" id="searchInputs">
-		<div class="row">	
-			<div class="col-md-4">Width<br /><input class="form-control" placeholder="225" ng-model="tire.width" required></div>
-			<div class="col-md-4">Ratio<br /><input class="form-control" placeholder="45" ng-model="tire.ratio" required></div>
-			<div class="col-md-4">Diameter<br /><input class="form-control" placeholder="17" ng-model="tire.diameter" required></div>
+		<div class="row">
+			<div class="col-md-4">Width<br /><input class="form-control" placeholder="24" ng-model="tire.width" required></div>
+			<div class="col-md-4">Ratio<br /><input class="form-control" placeholder="40" ng-model="tire.ratio" required></div>
+			<div class="col-md-4">Diameter<br /><input class="form-control" placeholder="14" ng-model="tire.diameter" required></div>
 		</div>
 	</form>
 
 	<br />
-	<button class="btn btn-default" ng-click="searchByTireSize()" ng-disabled="form1.$invalid"> 
+	<button class="btn btn-default" ng-click="searchByTireSize()" ng-disabled="form1.$invalid">
 			Search <span class="glyphicon glyphicon-search"></span>
 	</button>
 

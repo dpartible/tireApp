@@ -4,7 +4,8 @@ var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
 
 // Database Collections to use
-var dbTires = mongojs('tires', ['tires']);	
+var dbTires = mongojs('mongodb://tire:1234@ds157487.mlab.com:57487/meantires', ['tires']);
+
 var dbVehicles = mongojs('vehicles', ['vehicles']);
 
 // Create express app
@@ -18,10 +19,12 @@ app.use(express.static(__dirname + '/public'));	// find and use the static html 
 // docs is an array of all the documents in mycollection
 app.get('/searchbytiresize/&:width&:ratio&:diameter', function(req, res){
 	 console.log("get req of searchbytiresize\nwidth: " + req.params.width + "\nratio: " + req.params.ratio + "\ndiameter: " + req.params.diameter);
-	 
+
 	 // Database Query
 	 dbTires.tires.find({width: req.params.width, ratio: req.params.ratio, diameter: req.params.diameter}, function (err, docs) {
-	    
+			//  if(err){
+			// 	 res.send(err);
+			//  }
 	    console.log(docs)
 	    res.json(docs);
 	});
