@@ -40,7 +40,7 @@ myAppCtrl.controller('MyAppController', ['$scope', '$http', '$location',
             // Sends GET request to server
         	$http.get('/searchbytiresize/&'+$scope.tire.width+'&'+$scope.tire.ratio+'&'+$scope.tire.diameter)
                 .success(function(response){
-				        // console.log(response);
+				        console.log(response);
 
                 // DEBUG: Print out recieved data
                 // for(var i = 0; i < response.length; i++){

@@ -8,13 +8,12 @@ var mongojs = require('mongojs');
 // Database Collections to use
 var dbTires = mongojs('mongodb://tire:1234@ds157487.mlab.com:57487/meantires', ['tires']);
 
-var dbVehicles = mongojs('vehicles', ['vehicles']);
+var dbVehicles = mongojs('mongodb://tire:1234@ds157487.mlab.com:57487/meantires', ['vehicles']);
 
 // Create express app
 var app = express();
 
-// app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
 
 // Server uses GET request from client
 // Query the Tire database using user inputs
@@ -28,7 +27,7 @@ app.get('/searchbytiresize/&:width&:ratio&:diameter', function(req, res){
 			//  if(err){
 			// 	 res.send(err);
 			//  }
-	    console.log(docs)
+	    // console.log(docs)
 	    res.json(docs);
 	});
 
@@ -43,6 +42,7 @@ app.get('/searchByVehicle/&:make&:year&:model', function(req, res){
 	 // Database Query
 	 dbVehicles.vehicles.find({VehicleMake: req.params.make, Year: req.params.year, Model: req.params.model}, function (err, docs) {
 
+		 console.log(docs)
 	    res.json(docs);
 
 	});
