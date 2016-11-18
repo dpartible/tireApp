@@ -17,6 +17,6 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongojs": "^2.4.0",
-    "ui-router": "^0.2.15"
+    "ui-router": "^1.0.0-alpha.3"
   }
 }
