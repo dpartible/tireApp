@@ -24,7 +24,8 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 					controller: 'MyAppController'
 				},
 				"navBar": {
-					templateUrl: '/partials/navBar.html',
+					// templateUrl: '/partials/navBar.html',
+					templateUrl: 'navBar.html',
 					controller: 'MyAppController'
 				}
 			}
