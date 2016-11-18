@@ -1,6 +1,8 @@
 var express = require("express");
 var bodyParser = require('body-parser');
 
+var port = process.env.PORT || 3000;
+
 var mongojs = require('mongojs');
 
 // Database Collections to use
@@ -47,5 +49,5 @@ app.get('/searchByVehicle/&:make&:year&:model', function(req, res){
 });
 
 // Start Server on port 3000
-app.listen(3000);
+app.listen(port);
 console.log("Server running on port 3000");
