@@ -13,7 +13,8 @@ var dbVehicles = mongojs('vehicles', ['vehicles']);
 // Create express app
 var app = express();
 
-app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
+// app.use(express.static(__dirname + '/public'));	// find and use the static html file in the 'public' folder
+app.use(express.static('public'));
 
 // Server uses GET request from client
 // Query the Tire database using user inputs
