@@ -23,10 +23,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 					templateUrl: '/partials/dataTable.html',
 					controller: 'MyAppController'
 				},
-				"navBar": {
-					templateUrl: '/partials/navBar.html',
-					controller: 'MyAppController'
-				}
+				// "navBar": {
+				// 	templateUrl: '/partials/navBar.html',
+				// 	controller: 'MyAppController'
+				// }
 			}
 
 
@@ -42,10 +42,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 					templateUrl: '/partials/dataTable.html',
 					controller: 'MyAppController'
 				},
-				"navBar": {
-					templateUrl: '/partials/navBar.html',
-					controller: 'MyAppController'
-				}
+				// "navBar": {
+				// 	templateUrl: '/partials/navBar.html',
+				// 	controller: 'MyAppController'
+				// }
 			}
 
 
@@ -57,10 +57,10 @@ myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
 					templateUrl: '/partials/bytiresize.html',
 					controller: 'MyAppController'
 				},
-				"navBar": {
-					templateUrl: '/partials/navBar.html',
-					controller: 'MyAppController'
-				}
+				// "navBar": {
+				// 	templateUrl: '/partials/navBar.html',
+				// 	controller: 'MyAppController'
+				// }
 			}
 
 		});
